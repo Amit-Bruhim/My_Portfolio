@@ -1,3 +1,4 @@
+import { ExternalLink, Github } from "lucide-react"
 
 const projects = [
     {
@@ -15,7 +16,7 @@ const projects = [
         title: "Arkanoid Game",
         description: "Coming soon...",
         image: "/projects/arkanoid thumbnail.png",
-        tags: [],
+        tags: ["OOP"],
         demourl: "#",
         githuburl: "#",
     },
@@ -25,7 +26,7 @@ const projects = [
         title: "Netflix clone",
         description: "Coming soon...",
         image: "/projects/netflix thumbnail.png",
-        tags: [],
+        tags: ["React"],
         demourl: "#",
         githuburl: "#",
     }
@@ -47,7 +48,7 @@ export const ProjectsSection = () => {
                 {projects.map((project, key) => (
                     <div
                         key={key}
-                        className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
+                        className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover flex flex-col h-full"
                     > 
                         <div className="h-48 overflow-hidden">
                             <img
@@ -56,10 +57,33 @@ export const ProjectsSection = () => {
                                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                             />
                         </div>
+
+                        <div className="pt-6 pl-6">
+                            <div className="flex flex-wrap gap-2 mb-4">
+                                {project.tags.map((tag) => (
+                                    <span className="px-2 py-1 text-xs font-medium border rounded-full bg-primary/20 text-secondary-foreground">
+                                        {tag}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+
+                        <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
+                        <p className="text-muted-foreground mb-4 text-sm">{project.description}</p>
+                        <div className="flex items-center justify-between ml-2">
+                            <div className="flex space-x-3">
+                               <a>
+                                  <ExternalLink/>
+                               </a>
+                               <a>
+                                  <Github/>
+                               </a>
+
+                            </div>
+                        </div>
                     </div>
                 ))}
             </div>
-
         </div>
 
     </section>
