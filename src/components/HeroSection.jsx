@@ -14,8 +14,7 @@ export const HeroSection = () => {
                 </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto opacity-0 animate-fade-in-delay-4">
-                I am an ambitious and driven third-year Computer Science student at Bar-Ilan University, with academic excellence, eager to gain hands-on experience
-                in software development and seeking part-time opportunities.
+                Aspiring Software Engineer
             </p>
         <div className="pt-4 opacity-0 animate-fade-in-delay-4">
             <a href="#projects" className="cosmic-button">
