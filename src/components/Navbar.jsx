@@ -37,7 +37,7 @@ export const Navbar = () => {
                     <span className="text-glow text-foreground">
                         AmiTech
                     </span>{" "}
-                    portfolio
+                    Portfolio
                 </span>
             </a>
         

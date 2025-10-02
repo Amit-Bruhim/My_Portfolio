@@ -1,51 +1,53 @@
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaPython, FaJava, FaGit, FaGithub, FaLinux, FaAndroid } from "react-icons/fa";
+import { SiGnubash ,SiTailwindcss, SiBootstrap, SiExpress, SiMongodb, SiMysql, SiC, SiCplusplus, SiJira } from "react-icons/si";
+import { GrMysql } from "react-icons/gr";
+import { VscVscode } from "react-icons/vsc";
+import { TbSql, TbAlphabetHebrew} from "react-icons/tb";
+import { RiEnglishInput } from "react-icons/ri";
 
 
 const skills = [
     // Frontend
-    { name: "HTML", category: "frontend" },
-    { name: "CSS", category: "frontend" },
-    { name: "JavaScript", category: "frontend" },
-    { name: "React", category: "frontend" },
-    { name: "Tailwind CSS", category: "frontend" },
-    { name: "Bootstrap", category: "frontend" },
+    { name: "HTML", category: "frontend", icon: <FaHtml5 /> },
+    { name: "CSS", category: "frontend", icon: <FaCss3Alt /> },
+    { name: "JavaScript", category: "frontend", icon: <FaJs /> },
+    { name: "React", category: "frontend", icon: <FaReact /> },
+    { name: "Tailwind CSS", category: "frontend", icon: <SiTailwindcss /> },
+    { name: "Bootstrap", category: "frontend", icon: <SiBootstrap /> },
 
     // Backend
-    { name: "Node.js", category: "backend" },
-    { name: "Express.js", category: "backend" },
-    { name: "MongoDB", category: "backend" },
-    { name: "MySQL", category: "backend" },
-    { name: "RESTful APIs", category: "backend" },
-
-
+    { name: "Node.js", category: "backend", icon: <FaNodeJs /> },
+    { name: "Express.js", category: "backend", icon: <SiExpress /> },
+    { name: "MongoDB", category: "backend", icon: <SiMongodb /> },
+    { name: "MySQL", category: "backend", icon: <GrMysql/> },
+    { name: "RESTful APIs", category: "backend", icon: <FaNodeJs /> },
+    
     // Tools
-    { name: "Git", category: "tools" },
-    { name: "GitHub", category: "tools" },
-    { name: "VSCode", category: "tools" },
-    { name: "Jira", category: "tools" },
-    { name: "Linux/Unix", category: "tools" },
-    { name: "Agile Development", category: "tools" },
-
+    { name: "Git", category: "tools", icon: <FaGit /> },
+    { name: "GitHub", category: "tools", icon: <FaGithub /> },
+    { name: "VSCode", category: "tools", icon: <VscVscode /> }, 
+    { name: "Jira", category: "tools", icon: <SiJira /> },
+    { name: "Linux/Unix", category: "tools", icon: <FaLinux /> },
+    { name: "Agile Development", category: "tools", icon: <SiJira /> },
 
     // Programming Languages
-    { name: "Python", category: "programming languages" },
-    { name: "Java", category: "programming languages" },
-    { name: "C++", category: "programming languages" },
-    { name: "C", category: "programming languages" },
-    { name: "SQL", category: "programming languages" },
-    { name: "bash", category: "programming languages" },
-
+    { name: "Python", category: "programming languages", icon: <FaPython /> },
+    { name: "Java", category: "programming languages", icon: <FaJava /> },
+    { name: "C++", category: "programming languages", icon: <SiCplusplus /> },
+    { name: "C", category: "programming languages", icon: <SiC /> },
+    { name: "SQL", category: "programming languages", icon: <TbSql />},
+    { name: "bash", category: "programming languages", icon: <SiGnubash />},
 
     // Languages
-    { name: "Hebrew", category: "languages" },
-    { name: "English", category: "languages" },
+    { name: "Hebrew", category: "languages", icon: <TbAlphabetHebrew/> },
+    { name: "English", category: "languages", icon: <RiEnglishInput/>},
 
     // Other
-    { name: "Android (Java)", category: "other" },
-    { name: "OOP", category: "backend" },
-
-]
+    { name: "Android (Java)", category: "other", icon: <FaAndroid /> },
+    { name: "OOP", category: "backend", icon: <FaJava /> },
+];
 
 const categories = ["all", "frontend", "backend", "tools", "programming languages", "languages", "other"]
 
@@ -65,10 +67,10 @@ export const SkillsSection = () => {
             <div className="flex flex-wrap justify-center gap-4 mb-12">
                 {categories.map((category, key) => (
                     <button key={key}
-                    onClick={() => setActiveCategory(category)}
-                    className={cn("px-5 py-2 rounded-full transition-colors duration-300 capitalize cursor-pointer",
-                    activeCategory === category ? "bg-primary text-primary-foreground" : "bg-secondary/70 text-foreground hover:bg-secondary"
-                    )}>{category}</button>
+                        onClick={() => setActiveCategory(category)}
+                        className={cn("px-5 py-2 rounded-full transition-colors duration-300 capitalize cursor-pointer",
+                            activeCategory === category ? "bg-primary text-primary-foreground" : "bg-secondary/70 text-foreground hover:bg-secondary"
+                        )}>{category}</button>
                 ))}
             </div>
 
@@ -76,9 +78,12 @@ export const SkillsSection = () => {
                 {filteredSkills.map((skill, key) => (
                     <div
                         key={key}
-                        className="bg-card p-6 tounded-lg shadow-xs card-hover"
+                        className="bg-card p-6 tounded-lg shadow-xs card-hover flex flex-col items-center"
                     >
-                        <div className="text-left mb-4">
+                        <div className="text-5xl mb-1">
+                            {skill.icon}
+                        </div>
+                        <div className="mb-2">
                             <h3 className="font-semibold text-lg">{skill.name}</h3>
                         </div>
 
