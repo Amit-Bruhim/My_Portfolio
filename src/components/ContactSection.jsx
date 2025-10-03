@@ -2,30 +2,46 @@ import { Linkedin, Mail, MapPin, Phone, Send } from "lucide-react"
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
+import emailjs from 'emailjs-com';
+
 
 
 
 export const ContactSection = () => {
     const { toast } = useToast();
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const SERVER_ID = "service_qzggrqi"
+    const TEMPLATE_ID = "template_qzcu4d7"
+    const PUBLIC_KEY = "u0U_J1MlZvUX7Rt4-"
 
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
         setIsSubmitting(true);
 
-        setTimeout(() => {
-            toast({
-                title: "Message Sent!",
-                description: "Thank you for your message. I'll get back to you as soon as possible.",
-            });
-            setIsSubmitting(false);
-        }, 1500);
+        emailjs.sendForm(SERVER_ID, TEMPLATE_ID, e.target, PUBLIC_KEY)
+            .then((result) => {
+                setTimeout(() => {
+                    toast({
+                        title: "Message Sent!",
+                        description: "Thank you for your message. I'll get back to you as soon as possible.",
+                    });
+                    setIsSubmitting(false);
+                }, 1500);
+            })
+            .catch(() => {
+                setTimeout(() => {
+                    toast({
+                        title: "Failed to Send Message",
+                        description: "Oops! Something went wrong. Please try again later.",
+                    });
+                    setIsSubmitting(false);
+                }, 1500);
+            })
     }
-    
-    
-    
+
+
+
     return <section id="contact" className="py-24 px-4 relative bg-secondary/30">
         <div className="container mx-auto max-w-5xl">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
@@ -106,21 +122,21 @@ export const ContactSection = () => {
                         </div>
                     </div>
                 </div>
-                <div className="bg-card p-8 rounded-lg shadow-xs" 
-                onSubmit={handleSubmit}
+                <div className="bg-card p-3 rounded-lg shadow-xs"
+                    onSubmit={handleSubmit}
                 >
-                    <h3 className="text-2xl font-semibold mb-6">
+                    <h3 className="text-2xl font-semibold mb-1">
                         Send A Message
                     </h3>
 
-                    <form className="space-y-6">
+                    <form className="space-y-3">
                         <div>
                             <label htmlFor="name" className="block text-sm font-medium mb-2"> Your Name</label>
                             <input
                                 type="text"
                                 id="name"
                                 name="name"
-                                className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
+                                className="w-full px-4 py-1 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
                                 placeholder="John Doe..."
                                 required
                             />
@@ -133,7 +149,7 @@ export const ContactSection = () => {
                                 type="email"
                                 id="email"
                                 name="email"
-                                className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
+                                className="w-full px-4 py-1 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
                                 placeholder="john@gmail.com"
                                 required
                             />
@@ -145,7 +161,7 @@ export const ContactSection = () => {
                             <textarea
                                 id="message"
                                 name="message"
-                                className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary resize-none"
+                                className="w-full px-4 py-2 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary resize-none"
                                 placeholder="Hello, I'd like to talk about..."
                                 required
                             />
@@ -156,9 +172,9 @@ export const ContactSection = () => {
                             className={cn(
                                 "cosmic-button w-full flex items-center justify-center gap-2"
                             )}
-                                >
-                                    {isSubmitting ? "Sending..." : "Send Message"}
-                                    <Send size={16} />
+                        >
+                            {isSubmitting ? "Sending..." : "Send Message"}
+                            <Send size={16} />
                         </button>
                     </form>
                 </div>
