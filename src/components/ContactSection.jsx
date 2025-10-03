@@ -1,4 +1,4 @@
-import { Mail } from "lucide-react"
+import { Linkedin, Mail, MapPin, Phone } from "lucide-react"
 
 
 export const ContactSection = () => {
@@ -24,7 +24,7 @@ export const ContactSection = () => {
                                 <Mail className="h-6 w-6 text-primary" />
                             </div>
                             <div>
-                                <h4 className="font-medium"> Email</h4>
+                                <h4 className="font-medium text-left"> Email</h4>
                                 <a
                                     href="mailto:amitbruhim33@gmail.com?subject=Hello%20from%20your%20portfolio&body=Hi%2C%0D%0A%0D%0AI%20visited%20your%20portfolio%20and%20was%20really%20impressed.%20I%20have%20an%20opportunity%20for%20you.%0D%0A%0D%0ABest%20regards%2C%0D%0A[Your%20Name]"
                                     target="_blank"
@@ -34,6 +34,53 @@ export const ContactSection = () => {
                                 </a>
                             </div>
                         </div>
+
+                        <div className="flex items-start space-x-4">
+                            <div className="p-3 rounded-full bg-primary/10">
+                                <Phone className="h-6 w-6 text-primary" />
+                            </div>
+                            <div>
+                                <h4 className="font-medium text-left"> Phone</h4>
+                                <a
+                                    href="tel:+972528964070"
+                                    target="_blank"
+                                    className="text-muted-foreground hover:text-primary transition-colors"
+                                >
+                                    (+972) - 0528964070
+                                </a>
+                            </div>
+                        </div>
+
+                        <div className="flex items-start space-x-4">
+                            <div className="p-3 rounded-full bg-primary/10">
+                                <MapPin className="h-6 w-6 text-primary" />
+                            </div>
+                            <div>
+                                <h4 className="font-medium text-left"> Location</h4>
+                                <a
+                                    className="text-muted-foreground hover:text-primary transition-colors"
+                                >
+                                    Petah Tikva, Tel Aviv Dist., Israel
+                                </a>
+                            </div>
+                        </div>
+
+                        <div className="flex items-start space-x-4">
+                            <div className="p-3 rounded-full bg-primary/10">
+                                <Linkedin className="h-6 w-6 text-primary" />
+                            </div>
+                            <div>
+                                <h4 className="font-medium text-left"> Linkedin</h4>
+                                <a
+                                    href="https://www.linkedin.com/in/amit-bruhim"
+                                    target="_blank"
+                                    className="text-muted-foreground hover:text-primary transition-colors"
+                                >
+                                    Amit Bruhim
+                                </a>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
