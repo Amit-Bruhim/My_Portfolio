@@ -176,3 +176,25 @@
   padding: 0;
   text-align: center;
 }
+
+.swiper-button-next,
+.swiper-button-prev {
+  transform: translateY(-50%);
+  @apply rounded-full p-2;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  @apply bg-white/40 dark:bg-gray-700/60;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: '➤';
+  font-size: 2rem;
+  color: hsl(var(--primary));
+}
+
+.swiper-button-prev::after {
+  transform: rotate(180deg);
+}
