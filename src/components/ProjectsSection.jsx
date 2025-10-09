@@ -1,4 +1,4 @@
-import { ArrowRight, ExternalLink, Github } from "lucide-react"
+import { ArrowRight, Github } from "lucide-react"
 
 const projects = [
     {
@@ -7,28 +7,34 @@ const projects = [
         description: "A beautiful, space-themed portfolio built with React and Tailwind CSS.",
         image: "/projects/portfolio thumbnail.png",
         tags: ["React", "Tailwind CSS", "JavaScript"],
-        demourl: "#",
-        githuburl: "#",
+        githuburl: "https://github.com/Amit-Bruhim/My_Portfolio",
     },
 
     {
         id: 2,
-        title: "Arkanoid Game",
-        description: "Coming soon...",
-        image: "/projects/arkanoid thumbnail.png",
-        tags: ["OOP"],
-        demourl: "#",
-        githuburl: "#",
+        title: "Intro to CS",
+        description: "A combined repository of exercises and mini-projects, featuring loops, recursion, games, and a Wordle clone.",
+        image: "/projects/intro to cs thumbnail.png",
+        tags: ["C", "Python"],
+        githuburl: "https://github.com/Amit-Bruhim/Intro-to-CS",
     },
 
     {
         id: 3,
+        title: "Arkanoid Game",
+        description: "Coming soon...",
+        image: "/projects/arkanoid thumbnail.png",
+        tags: ["OOP"],
+        githuburl: "https://github.com/Amit-Bruhim",
+    },
+
+    {
+        id: 4,
         title: "Netflix clone",
         description: "Coming soon...",
         image: "/projects/netflix thumbnail.png",
         tags: ["React"],
-        demourl: "#",
-        githuburl: "#",
+        githuburl: "https://github.com/Amit-Bruhim",
     }
 ]
 
@@ -72,11 +78,6 @@ export const ProjectsSection = () => {
                             <p className="text-muted-foreground mb-4 text-sm">{project.description}</p>
                             <div className="flex items-center justify-between ml-2">
                                 <div className="flex space-x-3">
-                                    <a href={project.demourl}
-                                        target="_blank"
-                                        className="text-foreground/80 hover:text-primary transition-colors duration-300">
-                                        <ExternalLink />
-                                    </a>
                                     <a href={project.githuburl}
                                         target="_blank"
                                         className="text-foreground/80 hover:text-primary transition-colors duration-300">
@@ -92,7 +93,7 @@ export const ProjectsSection = () => {
                 <a
                     className="cosmic-button w-fit flex items-center mx-auto gap-2"
                     target="_blank"
-                    href="#"
+                    href="https://github.com/Amit-Bruhim"
                 >
                     Check My Github <ArrowRight size={16} />
                 </a>
