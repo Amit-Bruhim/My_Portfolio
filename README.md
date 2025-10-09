@@ -1,12 +1,50 @@
-# React + Vite
+# AmiTech Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio!  
+This project showcases my skills, projects, and contact information.  
 
-Currently, two official plugins are available:
+🌐 [Visit the Live Site](https://amitech-portfolio.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Table of Contents
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- [Hero Section](#hero-section)
+- [About Section](#about-section)
+- [Skills Section](#skills-section)
+- [Projects Section](#projects-section)
+- [Contact Section](#contact-section)
+
+---
+
+## Hero Section
+
+This is the first section users see when they visit the website. It includes a welcome message and highlights my personal brand.
+
+![Hero Section GIF](public/readme%20screenshots/hero.gif)
+
+---
+
+## About Section
+
+A brief introduction about me, my background, and my experience.
+
+---
+
+## Skills Section
+
+Lists my technical skills, technologies I work with, and areas of expertise.
+
+---
+
+## Projects Section
+
+Showcases my featured projects with descriptions, tags, and GitHub links.
+
+---
+
+## Contact Section
+
+Information on how to get in touch with me, including social media and email.
+
+
