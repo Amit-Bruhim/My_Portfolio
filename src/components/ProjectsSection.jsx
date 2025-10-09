@@ -68,7 +68,7 @@ export const ProjectsSection = () => {
                 <SwiperSlide key={project.id}>
                 <div
                     key={key}
-                    className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover flex flex-col h-full min-h-[350px]"
+                    className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover flex flex-col h-full min-h-[350px] relative"
                 >
                     <div className="h-38 overflow-hidden">
                         <img
@@ -94,7 +94,7 @@ export const ProjectsSection = () => {
                             <div className="flex space-x-3">
                                 <a href={project.githuburl}
                                     target="_blank"
-                                    className="text-foreground/80 hover:text-primary transition-colors duration-300">
+                                    className="absolute left-4 bottom-4 text-foreground/80 hover:text-primary transition-colors duration-300">
                                     <Github />
                                 </a>
                             </div>
