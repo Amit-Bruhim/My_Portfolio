@@ -1,11 +1,11 @@
 export const projects = [
   {
     id: 1,
-    title: "AmiTech Portfolio",
-    description: "A beautiful, space-themed portfolio built with React and Tailwind CSS.",
-    image: "/projects/portfolio thumbnail.png",
-    tags: ["React", "Tailwind CSS", "JavaScript"],
-    githuburl: "https://github.com/Amit-Bruhim/My_Portfolio",
+    title: "Arkanoid Game",
+    description: "A classic brick-breaker game implemented in Java.",
+    image: "/projects/arkanoid thumbnail.jpg",
+    tags: ["OOP", "Java"],
+    githuburl: "https://github.com/Amit-Bruhim/Arkanoid",
   },
   {
     id: 2,
@@ -17,14 +17,6 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Arkanoid Game",
-    description: "A classic brick-breaker game implemented in Java.",
-    image: "/projects/arkanoid thumbnail.jpg",
-    tags: ["OOP", "Java"],
-    githuburl: "https://github.com/Amit-Bruhim/Arkanoid",
-  },
-  {
-    id: 4,
     title: "Netflix clone",
     description: "Coming soon...",
     image: "/projects/netflix thumbnail.png",
