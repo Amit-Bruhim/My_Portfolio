@@ -1,0 +1,34 @@
+export const projects = [
+  {
+    id: 1,
+    title: "AmiTech Portfolio",
+    description: "A beautiful, space-themed portfolio built with React and Tailwind CSS.",
+    image: "/projects/portfolio thumbnail.png",
+    tags: ["React", "Tailwind CSS", "JavaScript"],
+    githuburl: "https://github.com/Amit-Bruhim/My_Portfolio",
+  },
+  {
+    id: 2,
+    title: "Intro to CS",
+    description: "A combined repository of exercises and mini-projects, featuring loops, recursion, games, and a Wordle clone.",
+    image: "/projects/intro to cs thumbnail.png",
+    tags: ["C", "Python"],
+    githuburl: "https://github.com/Amit-Bruhim/Intro-to-CS",
+  },
+  {
+    id: 3,
+    title: "Arkanoid Game",
+    description: "A classic brick-breaker game implemented in Java.",
+    image: "/projects/arkanoid thumbnail.jpg",
+    tags: ["OOP", "Java"],
+    githuburl: "https://github.com/Amit-Bruhim/Arkanoid",
+  },
+  {
+    id: 4,
+    title: "Netflix clone",
+    description: "Coming soon...",
+    image: "/projects/netflix thumbnail.png",
+    tags: ["React"],
+    githuburl: "https://github.com/Amit-Bruhim",
+  },
+];
