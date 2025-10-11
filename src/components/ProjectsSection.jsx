@@ -26,10 +26,10 @@ const projects = [
     {
         id: 3,
         title: "Arkanoid Game",
-        description: "Coming soon...",
+        description: "A classic brick-breaker game implemented in Java.",
         image: "/projects/arkanoid thumbnail.png",
-        tags: ["OOP"],
-        githuburl: "https://github.com/Amit-Bruhim",
+        tags: ["OOP", "Java"],
+        githuburl: "https://github.com/Amit-Bruhim/Arkanoid",
     },
 
     {
