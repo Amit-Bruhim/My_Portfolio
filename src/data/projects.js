@@ -17,6 +17,14 @@ export const projects = [
   },
   {
     id: 3,
+    title: "COVID-19 Analytics",
+    description: "A data analysis project using SQL to extract insights from global COVID-19 datasets.",
+    image: "/projects/covid19 thumbnail.jpg",
+    tags: ["SQL", "MySQL", "Data Analysis"],
+    githuburl: "https://github.com/Amit-Bruhim/covid19-analytics",
+  },
+  {
+    id: 4,
     title: "Netflix clone",
     description: "Coming soon...",
     image: "/projects/netflix thumbnail.png",
