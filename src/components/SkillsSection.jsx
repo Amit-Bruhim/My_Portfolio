@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { cn } from "@/lib/utils";
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaPython, FaJava, FaGit, FaGithub, FaLinux, FaAndroid } from "react-icons/fa";
-import { SiGnubash ,SiTailwindcss, SiBootstrap, SiExpress, SiMongodb, SiMysql, SiC, SiCplusplus, SiJira } from "react-icons/si";
+import { FaRust, FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaPython, FaJava, FaGit, FaGithub, FaLinux, FaAndroid } from "react-icons/fa";
+import { SiFlask, SiPostman, SiGnubash ,SiTailwindcss, SiBootstrap, SiExpress, SiMongodb, SiMysql, SiC, SiCplusplus, SiJira } from "react-icons/si";
+import { DiProlog } from "react-icons/di";
 import { GrMysql } from "react-icons/gr";
 import { VscVscode } from "react-icons/vsc";
 import { TbSql, TbAlphabetHebrew} from "react-icons/tb";
@@ -14,6 +15,7 @@ const skills = [
     { name: "CSS", category: "frontend", icon: <FaCss3Alt /> },
     { name: "JavaScript", category: "frontend", icon: <FaJs /> },
     { name: "React", category: "frontend", icon: <FaReact /> },
+    { name: "React Native", category: "frontend", icon: <FaReact /> },
     { name: "Tailwind CSS", category: "frontend", icon: <SiTailwindcss /> },
     { name: "Bootstrap", category: "frontend", icon: <SiBootstrap /> },
 
@@ -23,6 +25,7 @@ const skills = [
     { name: "MongoDB", category: "backend", icon: <SiMongodb /> },
     { name: "MySQL", category: "backend", icon: <GrMysql/> },
     { name: "RESTful APIs", category: "backend", icon: <FaNodeJs /> },
+    { name: "Flask", category: "backend", icon: <SiFlask /> },
     
     // Tools
     { name: "Git", category: "tools", icon: <FaGit /> },
@@ -31,6 +34,7 @@ const skills = [
     { name: "Jira", category: "tools", icon: <SiJira /> },
     { name: "Linux/Unix", category: "tools", icon: <FaLinux /> },
     { name: "Agile Development", category: "tools", icon: <SiJira /> },
+    { name: "Postman", category: "tools", icon: <SiPostman /> },
 
     // Programming Languages
     { name: "Python", category: "programming languages", icon: <FaPython /> },
@@ -39,6 +43,8 @@ const skills = [
     { name: "C", category: "programming languages", icon: <SiC /> },
     { name: "SQL", category: "programming languages", icon: <TbSql />},
     { name: "bash", category: "programming languages", icon: <SiGnubash />},
+    { name: "Prolog", category: "programming languages", icon: <DiProlog /> },
+    { name: "Rust", category: "programming languages", icon: <FaRust /> },
 
     // Languages
     { name: "Hebrew", category: "languages", icon: <TbAlphabetHebrew/> },
