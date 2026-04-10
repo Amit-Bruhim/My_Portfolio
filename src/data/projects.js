@@ -2,13 +2,21 @@ export const projects = [
   {
     id: 1,
     title: "Arkanoid Game",
-    description: "A classic brick-breaker game implemented in Java.",
+    description: "A classic brick-breaker game implemented in Java using object-oriented programming principles.",
     image: "/projects/arkanoid thumbnail.jpg",
     tags: ["OOP", "Java"],
     githuburl: "https://github.com/Amit-Bruhim/Arkanoid",
   },
   {
     id: 2,
+    title: "Sokoban AI Solver",
+    description: "An intelligent agent that solves complex Sokoban puzzles using A*, GBFS search, and MDP-based decision making under uncertainty.",
+    image: "/projects/sokoban thumbnail.png",
+    tags: ["Python", "AI", "A*", "GBFS", "MDP"],
+    githuburl: "https://github.com/Amit-Bruhim/Sokoban",
+  },
+  {
+    id: 3,
     title: "Intro to CS",
     description: "A combined repository of exercises and mini-projects, featuring loops, recursion, games, and a Wordle clone.",
     image: "/projects/intro to cs thumbnail.png",
@@ -16,7 +24,7 @@ export const projects = [
     githuburl: "https://github.com/Amit-Bruhim/Intro-to-CS",
   },
   {
-    id: 3,
+    id: 4,
     title: "COVID-19 Analytics",
     description: "A data analysis project using SQL to extract insights from global COVID-19 datasets.",
     image: "/projects/covid19 thumbnail.jpg",
@@ -24,11 +32,11 @@ export const projects = [
     githuburl: "https://github.com/Amit-Bruhim/covid19-analytics",
   },
   {
-    id: 4,
-    title: "Netflix clone",
-    description: "Coming soon...",
+    id: 5,
+    title: "Netflix Clone",
+    description: "A full-stack streaming platform clone built with the MERN stack and a high-performance C++ recommendation engine.",
     image: "/projects/netflix thumbnail.png",
-    tags: ["React"],
+    tags: ["React", "Node.js", "MongoDB"],
     githuburl: "https://github.com/Amit-Bruhim",
   },
 ];
